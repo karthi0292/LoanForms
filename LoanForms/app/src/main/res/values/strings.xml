@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LoanForms</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="submit">Submit</string>
+</resources>

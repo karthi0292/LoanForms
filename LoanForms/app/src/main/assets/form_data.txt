@@ -1,0 +1,244 @@
+{
+  "formList": [
+    {
+      "title": "Personal Details",
+      "innerViews": [
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 1,
+          "labelName": "FirstName",
+          "input": {
+            "type": "text",
+            "minDigit": 3,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 2,
+          "labelName": "LastName",
+          "input": {
+            "type": "text",
+            "minDigit": 1,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "DROP_DOWN_T12",
+          "position": 3,
+          "labelName": "Gender",
+          "dataList": [
+            "Select a Gender",
+            "Male",
+            "Female",
+            "Others"
+          ]
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 4,
+          "labelName": "TelephoneNo",
+          "input": {
+            "type": "number",
+            "minDigit": 10,
+            "maxDigit": 12
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 5,
+          "labelName": "E-mail",
+          "regex": "^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$",
+          "input": {
+            "type": "email"
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 6,
+          "labelName": "AddressLine1",
+          "input": {
+            "type": "text",
+            "minDigit": 2,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 6,
+          "labelName": "AddressLine2",
+          "input": {
+            "type": "text",
+            "minDigit": 2,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 7,
+          "labelName": "AddressLine3",
+          "input": {
+            "type": "text",
+            "minDigit": 2,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "DROP_DOWN_T12",
+          "position": 8,
+          "labelName": "state",
+          "dataList": [
+            "Select a state",
+            "Tamilnadu",
+            "Andhra Pradesh",
+            "Others"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Identification Form",
+      "innerViews": [
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 1,
+          "labelName": "Nationality",
+          "input": {
+            "type": "text",
+            "minDigit": 2,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "CHECK_BOX_T13",
+          "position": 2,
+          "labelName": "MaritialStatus",
+          "dataList": [
+            "Single",
+            "Married",
+            "Others"
+          ]
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 3,
+          "labelName": "Language",
+          "input": {
+            "type": "text",
+            "minDigit": 2,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "CHECK_BOX_T13",
+          "position": 4,
+          "labelName": "Nature Of Employement",
+          "dataList": [
+            "Private Ltd",
+            "Public Ltd",
+            "Government Sector",
+            "Business",
+            "Others"
+          ]
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 5,
+          "labelName": "Name of Employer",
+          "input": {
+            "type": "text",
+            "minDigit": 2,
+            "maxDigit": 15
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 6,
+          "labelName": "Monthly Income",
+          "input": {
+            "type": "number",
+            "minDigit": 2
+          }
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 7,
+          "labelName": "PAN NO",
+          "input": {
+            "type": "text",
+            "maxDigit": 10
+          }
+        }
+      ]
+    },
+    {
+      "title": "Loan Form",
+      "innerViews": [
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 1,
+          "labelName": "Loan Amount",
+          "input": {
+            "type": "number",
+            "minAmt": 10000,
+            "maxAmt": 100000000
+          }
+        },
+        {
+          "viewType": "DROP_DOWN_T12",
+          "position": 2,
+          "labelName": "Rate Type",
+          "dataList": [
+            "Select rate type",
+            "Fixed",
+            "Adjustable"
+          ]
+        },
+        {
+          "viewType": "DROP_DOWN_T12",
+          "position": 3,
+          "labelName": "No of Terms",
+          "dataList": [
+            "Select no of terms",
+            "12",
+            "24",
+            "36",
+            "48",
+            "60"
+          ]
+        },
+        {
+          "viewType": "DROP_DOWN_T12",
+          "position": 4,
+          "labelName": "What will be loan used for",
+          "dataList": [
+            "Select the purpose",
+            "Business",
+            "MonthlyExpense",
+            "EducationFees"
+          ]
+        },
+        {
+          "viewType": "EDT_TEXT_T11",
+          "position": 5,
+          "labelName": "Account No",
+          "input": {
+            "type": "number",
+            "minDigit":6,
+            "maxDigit": 12
+          }
+        },
+        {
+          "viewType": "DROP_DOWN_T12",
+          "position": 6,
+          "labelName": "Account Type",
+          "dataList": [
+            "Select the account type",
+            "Savings",
+            "Current"
+          ]
+        }
+      ]
+    }
+  ]
+}
