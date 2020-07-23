@@ -1,25 +1,26 @@
 package com.scb.loanforms
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
-import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 
 class CheckBoxRvAdapter(
     cxt: Context,
-    dataList: ArrayList<String>
+    dataList: ArrayList<String>,
+    checkBoxClickListener: Utils.CheckBoxClickListener
 ) : RecyclerView.Adapter<CheckBoxRvAdapter.CheckBoxViewHolder>() {
-    private var selectedPostion: Int = -1
+    private var selectedPosition: Int = -1
     private var ctxt: Context? = null
     private var dataList: ArrayList<String>
+    private val checkBoxListener:Utils.CheckBoxClickListener
 
     init {
         this.ctxt = cxt
         this.dataList = dataList
+        this.checkBoxListener=checkBoxClickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CheckBoxViewHolder {
@@ -33,16 +34,18 @@ class CheckBoxRvAdapter(
 
     override fun onBindViewHolder(holder: CheckBoxViewHolder, position: Int) {
         holder.checkBox.text = dataList[position]
-        holder.checkBox.isChecked = selectedPostion == position
+        holder.checkBox.isChecked = selectedPosition == position
 
         holder.itemView.setOnClickListener {
-            selectedPostion = holder.adapterPosition
+            selectedPosition = holder.adapterPosition
+            checkBoxListener.setSelectedItem(selectedPosition,dataList[position])
             notifyDataSetChanged()
         }
     }
 
-    public fun getSelectedValue(): String {
-        return dataList[selectedPostion]
+    fun setSelectedItem(selectedPosition: Int) {
+        this.selectedPosition = selectedPosition
+        notifyDataSetChanged()
     }
 
     class CheckBoxViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
